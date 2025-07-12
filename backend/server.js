@@ -1,11 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const urlRoutes = require('./routes/urlRoutes');
 
 dotenv.config();
 const app = express();
 
+const corsOptions = {
+    origin: process.env.FRONTEND_URL,
+    credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use('/shorten', urlRoutes);
 
