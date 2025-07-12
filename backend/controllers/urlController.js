@@ -62,3 +62,18 @@ exports.updateUrl = async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 };
+
+exports.deleteUrl = async (req, res) => {
+    const { shortCode } = req.params;
+
+    try {
+        const found = await Url.findOne({ shortCode });
+        if (!found) return res.status(404).json({ error: "URL not found" });
+
+        await Url.findOneAndDelete({ shortCode });
+
+        res.status(200).json({ message: "URL deleted successfully" });
+    } catch (err) {
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+};
