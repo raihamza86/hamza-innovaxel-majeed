@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional build artifacts
+dist/
+build/
+
+# Coverage directory used by testing tools
+coverage/
+
+# VSCode settings
+.vscode/
+
+# Debug files
+*.tgz
+
+# IDEs and editors
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Temporary files
+tmp/
+temp/
+
+# Optional: ignore email preview if using nodemailer test account
+emails/
