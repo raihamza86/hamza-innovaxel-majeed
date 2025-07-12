@@ -12,7 +12,7 @@ const urlSchema = new mongoose.Schema({
     },
     accessCount: {
         type: Number,
-        default: 0, 
+        default: 0,
     },
     createdAt: {
         type: Date,
